@@ -18,9 +18,8 @@ public class Cachorro {
                 ", idade=" + this.idade +  "}\n";
     }
 
-    public Cachorro clonarCachorro(){
-        Cachorro c2 = new Cachorro(this.nome, this.raca, this.idade);
-        return c2;
+    public Cachorro clonarCachorro(){ 
+        return new Cachorro(this.nome, this.raca, this.idade);
     }
     public String getNome() {
         return nome;
