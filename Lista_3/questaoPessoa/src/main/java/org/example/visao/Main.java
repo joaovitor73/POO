@@ -14,7 +14,7 @@ public class Main {
         Aluno a1;
         Pessoa p = null;
         Turma t1 = null, t2 = null, t3 = null;
-        int op, codigo;
+        int op, codigo, tam;
         boolean flag;
         String nome, cpf, endereco;
         do {
@@ -150,8 +150,11 @@ public class Main {
                                     }
                                 }
                                 if (flag) {
+                                    tam = t3.getAlunos().size();
                                     uti.diferenca(t1,t2,t3);
-                                    System.out.println("Duplicação realizada com sucesso!!");
+                                    if(t3.getAlunos().size() > tam)
+                                        System.out.println("Duplicação realizada com sucesso!!");
+                                    else System.out.println("Na primeira turma não tem alunos que não façam parte da segunda turma!!");
                                 } else System.out.println("A turma com esse código não foi encontrada!!");
                             } else System.out.println("A turma com esse código não foi encontrada!!");
                         } else System.out.println("A turma com esse código não foi encontrada!!");
