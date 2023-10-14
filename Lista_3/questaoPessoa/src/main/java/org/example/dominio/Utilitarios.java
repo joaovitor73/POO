@@ -19,7 +19,7 @@ public class Utilitarios {
         for(Pessoa a1: alunos1){
             flag = true;
             for(Pessoa a2: alunos2){
-                if(a1.equals(a2)) {
+                if((a1.getCPF().equals(a2.getCPF())) && (a1.getNome().equals(a2.getNome()))) {
                     flag = false;
                     break;
                 }
